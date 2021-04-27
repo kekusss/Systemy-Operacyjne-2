@@ -35,11 +35,11 @@ for ITEM in ${FILE_LIST}; do
         chmod -R "u+wx" ${ITEM}
     fi
 
-    if [[ -d "${ITEM}" ]] && [[ ${ITEM#*.} == "txt" ]] ; then
+    if [[ -f "${ITEM}" ]] && [[ ${ITEM#*.} == "txt" ]] ; then
         chmod 421 ${ITEM}
     fi
 
-    if [[ -d "${ITEM}" ]] && [[ ${ITEM#*.} == "exe" ]] ; then
+    if [[ -f "${ITEM}" ]] && [[ ${ITEM#*.} == "exe" ]] ; then
         chmod "a+x" ${ITEM}
     fi
 done
